@@ -21,7 +21,7 @@ searchImput.addEventListener('input', (event) => {
     }
     }else{
         items.forEach(item => item.style.display = 'none');
-        noResults.style.display = 'none'
+        noResults.style.display = 'none '
     }
 });
 
