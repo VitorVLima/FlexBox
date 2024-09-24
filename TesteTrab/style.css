@@ -11,21 +11,28 @@ body{
 
 header{
     background-color: aquamarine;
-    height: 80px;
+    height: 60px;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.479);
+}
+
+#content{
+    display: flex;
+    position: relative;
 }
 
 #menu{
     display: flex;
     justify-content: space-between;
+    border-radius: 20px
 }
+
 #menu div{
-    border: 1px solid black;
-    height: 80px;
-    flex-basis: 50px;
+    height: 60px;
+    flex-basis: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 #menu div i{
@@ -40,12 +47,16 @@ header{
     align-items: center;
 }
 
+.menu:hover, .search:hover{
+    background-color: rgb(46, 100, 100);
+}
+
 .logo img {
-    width: 80px;
+    width: 60px;
 
 }
 
-#conteudo #sidebar{
+#content #sidebar{
     background-color: aquamarine;
     width: 80%;
     max-width: 300px;
@@ -53,6 +64,21 @@ header{
     height: 500px;
 
 }
+
+#sidebar{
+    position: absolute;
+    border-radius: 10px;
+    display: none;
+    z-index: 2;
+    opacity: 0; /* Opacidade inicial */
+    transition: opacity 0.5s ease; /* Transição de opacidade */
+}
+
+#sidebar.visible {
+    display: block; /* Exibir o sidebar */
+    opacity: 1; /* Opacidade total */
+}
+
 
 #sidebar .items{
     list-style: none;
@@ -73,10 +99,57 @@ header{
     text-decoration: none;
     color: white;
     text-shadow: 0px 0px 3px black;
-    flex: auto;
-
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
 }
 
 #sidebar .items .item:hover{
     background-color: rgb(46, 100, 100);
+}
+
+
+#category {
+    position: relative;
+}
+
+.subclass {
+    display: none; /* Inicialmente oculto */
+    border-radius: 10px; /* Cantos arredondados */
+    margin-top: 10px; /* Espaçamento acima do submenu */
+}
+
+.item:hover .subclass {
+    list-style-type: none;
+    display: flex; /* Mostra o submenu ao passar o mouse */
+    flex-direction: column; 
+    width: 200px;
+    position: absolute;
+    background-color:aquamarine;
+    box-shadow: 0px 0px 5px black;
+    left: 300px;
+    top: -60px;
+}
+
+.subitems {
+    padding: 10px; /* Espaçamento interno */
+    color: white; /* Cor do texto */
+    text-shadow: 0px 0px 2px black; /* Sombra para o texto */
+    cursor: pointer; 
+    font-size: 16px;
+    border: 1px solid rgb(46, 100, 100);
+}
+
+.subitems:hover {
+    background-color: rgb(46, 100, 100) /* Cor de fundo ao passar o mouse */
+}
+
+x
+
+main{
+    padding: 10px;
+    z-index: 1;
+    position: relative;
 }

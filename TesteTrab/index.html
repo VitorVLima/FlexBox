@@ -11,8 +11,8 @@
 <body>
     <header>
         <nav id="menu">
-            <div class="menu">
-                <i class="fa-solid fa-bars"></i>
+            <div class="menu" id="bottomMenu">
+                <i class="fa-solid fa-bars" id="open-btn-icon"></i>
             </div>
 
             <div class="logo">
@@ -20,37 +20,47 @@
                 <h2>Dicas e Viagens</h2>
             </div>
 
-            <div class="search">
+            <div class="search" id="bottomSearch">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </div>
         </nav>
     </header>
-    <div id="conteudo">
+    <div id="content">
         <nav id="sidebar">
             <ul class="items">
                 <li class="item"><a href="">
-                    <i class="fa-solid fa-gear"></i>
-                    <span class="item-description">Configurações</span>
+                    <i class="fa-solid fa-house"></i>
+                    <span class="item-description">Home</span>
                 </a></li>
 
                 <li class="item"><a href="">
-                    <i class="fa-solid fa-gear"></i>
-                    <span class="item-description">Configurações</span>
+                    <i class="fa-solid fa-plane"></i>
+                    <span class="item-description">Destinos</span>
+                </a></li>
+
+                <li class="item" id="category"><a href="">
+                    <i class="fa-solid fa-list"></i>
+                    <span class="item-description">Categorias</span>
+                </a>
+                    <ul class="subclass">
+                        <li class="subitems">Regiões</li>
+                        <li class="subitems">Praia</li>
+                        <li class="subitems">Viagem com a Familia</li>
+                        <li class="subitems">Serra</li>
+                        <li class="subitems">Cidades Históricas</li>
+
+                    </ul>
+                
+            </li>
+
+                <li class="item"><a href="">
+                    <i class="fa-solid fa-hashtag"></i>
+                    <span class="item-description">Redes Sociais</span>
                 </a></li>
 
                 <li class="item"><a href="">
-                    <i class="fa-solid fa-gear"></i>
-                    <span class="item-description">Configurações</span>
-                </a></li>
-
-                <li class="item"><a href="">
-                    <i class="fa-solid fa-gear"></i>
-                    <span class="item-description">Configurações</span>
-                </a></li>
-
-                <li class="item"><a href="">
-                    <i class="fa-solid fa-gear"></i>
-                    <span class="item-description">Configurações</span>
+                    <i class="fa-solid fa-envelope"></i>
+                    <span class="item-description">Fale Conosco</span>
                 </a></li>
             </ul>
         </nav>
