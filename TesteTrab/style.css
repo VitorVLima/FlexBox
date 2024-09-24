@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    min-height: 100vh;
+}
+
+header{
+    background-color: aquamarine;
+    height: 80px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.479);
+}
+
+#menu{
+    display: flex;
+    justify-content: space-between;
+}
+#menu div{
+    border: 1px solid black;
+    height: 80px;
+    flex-basis: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu div i{
+    font-size: 20px;
+    color: white;
+    text-shadow: 0px 0px 3px black;
+}
+#menu div.logo{
+    flex-basis: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    width: 80px;
+
+}
+
+#conteudo #sidebar{
+    background-color: aquamarine;
+    width: 80%;
+    max-width: 300px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.479);
+    height: 500px;
+
+}
+
+#sidebar .items{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+#sidebar .items .item {
+    font-size: 20px;
+    border-top: 1px solid rgb(46, 100, 100);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+#sidebar .items .item a{
+    text-decoration: none;
+    color: white;
+    text-shadow: 0px 0px 3px black;
+    flex: auto;
+
+}
+
+#sidebar .items .item:hover{
+    background-color: rgb(46, 100, 100);
+}
