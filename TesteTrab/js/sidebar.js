@@ -1,4 +1,6 @@
 const botao = document.getElementById('bottomMenu');
+const category = document.getElementById('bottomCat');
+const subitem = document.getElementById('subclass');
 
 botao.addEventListener('click', function() {
     const sidebar = document.getElementById('sidebar');
@@ -8,6 +10,7 @@ botao.addEventListener('click', function() {
         setTimeout(() => {
             sidebar.style.display = 'none'; // Esconder após a transição
         }, 500); // Tempo da transição
+        subitem.style.display = 'none';
     } else {
         sidebar.style.display = 'block'; // Mostrar imediatamente
         setTimeout(() => {
@@ -25,6 +28,15 @@ botao.addEventListener('click', function() {
         icon.classList.add('fa-bars');
     }
 });
+
+category.addEventListener('click', function(){
+
+    if(subitem.style.display == 'none'){
+        subitem.style.display = 'block';
+    }else{
+        subitem.style.display = 'none';
+    }
+})
 
 
 
